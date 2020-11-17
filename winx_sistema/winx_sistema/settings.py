@@ -30,8 +30,9 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-INSTALLED_APPS = [
-    'winx_sistema_loja.apps.WixSistemaLojaConfig',
+
+INSTALLED_APPS = [  
+    'winx_sistema_loja.apps.WinxSistemaLojaConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
