@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'winx_sistema_loja.apps.WixSistemaLojaConfig',
+    'winx_sistema_loja.apps.WinxSistemaLojaConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -80,8 +80,8 @@ DATABASES = {
         'NAME': 'winx_sistema',
         'USER': 'root',
         'PASSWORD': 'root',
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'HOST': '',
+        'PORT': '',
     }
 }
 
