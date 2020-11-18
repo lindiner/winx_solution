@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class WixSistemaLojaConfig(AppConfig):
-    name = 'wix_sistema_loja'
+class WinxSistemaLojaConfig(AppConfig):
+    name = 'winx_sistema_loja'

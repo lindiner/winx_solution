@@ -1,32 +1,79 @@
 from django.db import models
-from .models import User
 
-# Create your models here.
-class vendedor(models.Model):
-    idpessoa = models.AutoField(primary_key=True)
-    codVendedor = models.models.IPAddressField(_(""))
+class usuario(models.Model):
+    idPessoa = models.UUIDField(primary_key=True)
     name = models.CharField(max_length=128)
-    email = models.EmailField(_(""), max_length=254)
-    idade = models.models.DateField(_(""), auto_now=False, auto_now_add=False)
-    cpf = models.BinaryField(_(""))
-    cnpj = models.BigAutoField(_(""))
-    cep = models.models.BigAutoField(_(""))
-    endereco = models.CharField(_(""), max_length=50)
-    bairro = models.CharField(_(""), max_length=50)
-    cidade = models.CharField(_(""), max_length=50)
-    estado = models.CharField(_(""), max_length=50)
+    email = models.EmailField( max_length=254)
+    idade = models.DateField()
+    cpf = models.CharField(max_length=14,null=False,blank=False)
+    cep = models.CharField(max_length=8,null=False,blank=False)
+    endereco = models.CharField(max_length=50)
+    bairro = models.CharField( max_length=50)
+    cidade = models.CharField( max_length=50)
+    estado = models.CharField(max_length=40)
+
+    
+
+class vendedor(models.Model):
+    codVendedor = models.IntegerField()
+    usuario = models.ForeignKey(usuario,on_delete=models.CASCADE)
+    
 
 
-class login(models.Model):
-    usuario = models.CharField(max_length=50)
-    senha = models.models.TextField(_(""))
-    vendedor = models.ManyToManyField(vendedor.idpessoa)
+class loginAcessoS(models.Model):
+    login = models.CharField(max_length=50, null=True)
+    senha = models.CharField(max_length=50)
+    pessoa = models.ForeignKey(usuario,on_delete=models.CASCADE)
+   
 
 
-class Produto(models.Model):
+class loja(models.Model):
+    idLoja = models.UUIDField(primary_key=True)
+    nameLoja = models.CharField(max_length=128)
+    emailLoja = models.EmailField( max_length=254)
+    telefoneLoja = models.IntegerField()
+    cep = models.CharField(max_length=8,null=False,blank=False)
+    endereco = models.CharField(max_length=50)
+    bairro = models.CharField( max_length=50)
+    cidade = models.CharField( max_length=50)
+
+class categoria(models.Model):
+    nomeCategoria = models.CharField(max_length=50)
+    dt_criacao = models.DateTimeField(auto_now_add=False)
+
+class produto(models.Model):
+    idProduto = models.UUIDField(primary_key=True, default='')
+    name = models.CharField(max_length=58,default='' )
+    precoProduto = models.DecimalField(max_digits=5, decimal_places=2, null=True)
+    codigoProduto = models.IntegerField(default='')
+    quantidadeEstoque = models.IntegerField(null=True)
+    corProduto = models.CharField(max_length=50, null=True)
+    tamanho = models.IntegerField(null=True)
+
     STATUS = (
         ('active', 'Ativo'),
         ('draft', 'Inativo')
         )
 
     status = models.CharField(max_length=15, choices=STATUS)
+    vendedorCod = models.ForeignKey(vendedor,on_delete=models.CASCADE)
+    
+    def __str__(self):
+        return f'{self.idProduto} ({self.vendedor.codVendedor})'
+
+class avaliacao(models.Model):
+    nota = models.IntegerField()
+    comentario = models.TextField(max_length=240)
+    categoriaAvaliacao = models.ForeignKey(categoria,on_delete=models.CASCADE)
+    produtoAvaliado = models.ForeignKey(produto,on_delete=models.CASCADE)
+
+
+
+
+class transacao(models.Model):
+    data = models.DateField()
+    descricao = models.CharField(max_length=200)
+    valor = models.DecimalField( max_digits=5, decimal_places=2)
+    categoria = models.ForeignKey(categoria, on_delete=models.CASCADE)
+    produtoAvaliado = models.ForeignKey(produto,on_delete=models.CASCADE)
+    usuarioTransacao = models.ForeignKey(usuario, on_delete=models.CASCADE)
