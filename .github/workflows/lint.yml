@@ -16,4 +16,4 @@ jobs:
       - uses: actions/checkout@v1
       - uses: ricardochaves/python-lint@master
         with:
-          python_root_list: 'winx_sistema'
+          python-root-list: 'winx_sistema'
