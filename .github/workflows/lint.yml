@@ -1,0 +1,19 @@
+# This is a basic usage of python lint referenced in https://medium.com/juntos-somos-mais/python-lint-com-github-actions-d4c01423136
+
+name: Python Lint
+
+# This action is triggered by push
+on: [push]
+
+jobs:
+  # Now this workflow contains a single job called lint
+  lint:
+    
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - uses: actions/checkout@v1
+      - uses: ricardochaves/python-lint@test
+        with:
+          python_root_list: 'winx_sistema'
