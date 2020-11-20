@@ -44,6 +44,7 @@ E a página de controle da loja:
 ![Página de controle da loja](https://raw.githubusercontent.com/lindiner/winx_solution/main/screenshots/08.png)
 
 Viu só como é fácil? Ainda assim, se por algum motivo algo não estiver claro, você pode conversar através de um chat com a própria Magalu! Ela adora ajudar e estará sempre disponível! :information_desk_person:
+![Conversa com o bot](https://raw.githubusercontent.com/lindiner/winx_solution/main/screenshots/magalu%20gif.gif)
 
 ## :star_struck: O que devo fazer para testar o projeto?
 
@@ -56,9 +57,7 @@ Viu só como é fácil? Ainda assim, se por algum motivo algo não estiver claro
 Você deverá rodar o seguinte comando para clonar o repositório:
 
 ``` 
-
 git clone https://github.com/lindiner/winx_solution.git 
-
 ```
 
 ### Preparando o ambiente Python
@@ -66,11 +65,9 @@ git clone https://github.com/lindiner/winx_solution.git
 Para a criação e ativação, rode os seguintes comandos:
 
 ```
-
 python  -m  venv  venv_winx_solution
 
 venv_winx_solution\Scripts\activate.bat
-
 ```
 
 ### Instalação dos requisitos
@@ -78,9 +75,7 @@ venv_winx_solution\Scripts\activate.bat
 Para instalar as bibliotecas-requisito do projeto rode:
 
 ```
-
 pip install -r requirements.txt
-
 ```
 
 ### Execução
@@ -102,7 +97,6 @@ python manage.py runserver
 ## Especificação _ipsis litteris_ do projeto
 
 ```
-
 Uma solução aberta para outros vendedores colocarem seus produtos a venda
 em nossa plataforma.
 
@@ -130,4 +124,17 @@ Requisitos não obrigatórios:
 - Criação de testes unitários para a solução;
 - Implementação de Continuous Integration (Sugestão se for fazer, utilizem o github =) );
 - Versionamento do código (git);
-- Autenticação na API por seller (cada seller teria uma "chave" de acesso)```
+- Autenticação na API por seller (cada seller teria uma "chave" de acesso)
+```
+
+### Tabela de Requisitos
+
+Requisito | Cumprimento
+--------- | -----------
+API Rest | :heavy_check_mark:
+Representação | :heavy_check_mark:
+CRUD | :heavy_check_mark:
+Testes unitários |  :x:
+CI | :heavy_check_mark:
+Versionamento | :heavy_check_mark:
+API seller |  :x:
