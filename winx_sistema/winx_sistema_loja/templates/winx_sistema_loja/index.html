@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 	<head>
@@ -6,20 +7,20 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<!-- LINEARICONS -->
-		<link rel="stylesheet" href="fonts/linearicons/style.css">
+		<link rel="stylesheet" href="{% static 'fonts/linearicons/style.css' %}">
 		
 		<!-- STYLE CSS -->
-		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="{% static 'css/style.css' %}">
 	</head>
 
 	<body>
 		<div class="fundo">
 			<div class="wrapper">
 				<div class="inner">
-					<img src="images/magalu.png" alt="" class="image-1">
-					<img src="images/tag.png" alt="" class="image-tag">
-					<form action="nivel_vendedor/html/dashboard.html">
-						<img src="images/logo_parceiros.png" alt="">
+					<img src="{% static 'images/magalu.png' %}" alt="" class="image-1">
+					<img src="{% static 'images/tag.png' %}" alt="" class="image-tag">
+					<form action="{% static 'nivel_vendedor/html/dashboard.html' %}">
+						<img src="{% static 'images/logo_parceiros.png' %}" alt="">
 						<!--<img src="images/fases.png" alt="">-->
 						<div class="form-holder">
 							<span class="lnr lnr-user"></span>
@@ -40,9 +41,9 @@
 				
 			</div>
 		</div>
-			<img src="images/parceiros.png" class="parceiros">
+			<img src="{% static 'images/parceiros.png' %}" class="parceiros">
 		
-		<script src="js/jquery-3.3.1.min.js"></script>
-		<script src="js/main.js"></script>
+		<script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+		<script src="{% static 'js/main.js' %}"></script>
 	</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 </html>

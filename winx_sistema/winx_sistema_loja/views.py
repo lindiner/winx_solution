@@ -6,7 +6,7 @@ def home(request):
     return render(request, 'winx_sistema_loja/index.html')
 
 def cadastro(request):
-    return render(request, 'winx_sistema_loja/cadastre-se.html')
+    return render(request, 'winx_sistema_loja/cadastrese.html')
 
 def criar_lojinha(request):
     return render(request, 'winx_sistema_loja/criar-lojinha.html')
