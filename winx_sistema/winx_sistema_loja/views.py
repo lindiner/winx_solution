@@ -74,3 +74,24 @@ def novo_login(request):
     data_login['form'] = form
     return render(request, 'loj/form.html', data_login)
 
+def update(request, pk):
+    data = {}
+    produto = produto.object.get(pk=pk)
+    form = produtoForm(request.POST or None, instance = produto)
+    
+    if form.is_valid():
+        form.save()
+    data['form'] = form
+    return render(request, 'produto/form.html',data)
+
+
+def update(request, pk):
+    data_usuario = {}
+    usuario = usuario.object.get(pk=pk)
+    form = usuarioForm(request.POST or None, instance = usuario)
+
+    if form.is_valid():
+        form.save()
+         
+    data_usuario['form'] = form
+    return render(request, 'loj/form.html', data_usuario)
