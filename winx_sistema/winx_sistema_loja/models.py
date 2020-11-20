@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class usuario(models.Model):
     idPessoa = models.UUIDField(primary_key=True)
     name = models.CharField(max_length=128)
