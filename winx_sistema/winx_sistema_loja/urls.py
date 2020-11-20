@@ -9,7 +9,7 @@ urlpatterns = [
     path('produtos/', views.produtos, name='winx_sistema-produtos'),
     path('pedidos/', views.pedidos, name='winx_sistema-pedidos'),
     path('notificacoes/', views.notificacoes, name='winx_sistema-notificacoes'),
-    path('visualizar_loja/', views.visualizar_loja, name='winx_sistema-visualizar_loja'),
+    path('loja/', views.loja, name='winx_sistema-visualizar_loja'),
     path('estoque/', views.estoque, name='winx_sistema-estoque'),
     
 ]
