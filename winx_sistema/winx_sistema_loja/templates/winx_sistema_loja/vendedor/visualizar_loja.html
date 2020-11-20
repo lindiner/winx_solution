@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,15 +10,16 @@
   <title>
     Magazine Luiza
   </title>
-  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
+    name='viewport' />
   <!--     Fonts and icons     -->
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
   <!-- CSS Files -->
-  <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="../assets/css/paper-dashboard.css?v=2.0.1" rel="stylesheet" />
+  <link href="{% static 'assets/css/bootstrap.min.css' %}" rel="stylesheet" />
+  <link href="{% static 'assets/css/paper-dashboard.css' %}" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
-  <link href="../assets/demo/demo.css" rel="stylesheet" />
+  <link href="{% static 'assets/demo/demo.css' %}" rel="stylesheet" />
 </head>
 
 <body style="background-color:#F4F3EF">
@@ -26,12 +28,12 @@
       <div class="logo">
         <a href="https://www.creative-tim.com" class="simple-text logo-mini">
           <div class="logo-image-small">
-            <img src="../assets/img/logo-small.png">
+            <img src="{% static 'assets/img/logo-small.png' %}">
           </div>
           <!-- <p>CT</p> -->
         </a>
         <a href="https://www.creative-tim.com" class="simple-text logo-normal">
-         Parceiro Magalu
+          Parceiro Magalu
         </a>
       </div>
       <div class="sidebar-wrapper">
@@ -66,19 +68,19 @@
               <p>Perfil do vendedor</p>
             </a>
           </li>
-		  <li>
+          <li>
             <a href="./visualizar_loja.html">
               <i class="nc-icon nc-album-2"></i>
               <p>Visualizar loja</p>
             </a>
           </li>
-		  <li>
+          <li>
             <a href="../../index.html">
               <i class="nc-icon nc-simple-remove"></i>
               <p>Sair</p>
             </a>
           </li>
-          
+
         </ul>
       </div>
     </div>
@@ -96,7 +98,8 @@
             </div>
             <a class="navbar-brand" href="javascript:;">Loja Winx</a>
           </div>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+            aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-bar navbar-kebab"></span>
             <span class="navbar-toggler-bar navbar-kebab"></span>
             <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -116,154 +119,159 @@
         </div>
       </nav>
       <!-- End Navbar -->
-    <div class="content">
+      <div class="content">
         <div class="row">
-  
-			<div class="navbar-brand">
-				<div class="card card-user">
-				  <div class="image">
-					<img src="../assets/img/fundo_magalu.jpg" style="width:100%; height:100%" alt="...">
-				  </div>
-				  <div class="card-body">
-					<div class="author">
-					  <a href="#">
-						<img class="avatar border-gray" src="../assets/img/logo.png" alt="...">
-						<h5 style="color:#0084CF" class="title">Winx </h5>
-					  </a>
 
-					</div>
-					<p class="description text-center">
-					  Venda de brinquedos por atacado<br>
-					  <img style="height:30px;" src="../assets/img/estrelas.png">
-					</p>
-				  </div> 
-				  <div class="card-footer">
-					<hr>
+          <div class="navbar-brand">
+            <div class="card card-user">
+              <div class="image">
+                <img src="{% static 'assets/img/fundo_magalu.jpg' %}" style="width:100%; height:100%" alt="...">
+              </div>
+              <div class="card-body">
+                <div class="author">
+                  <a href="#">
+                    <img class="avatar border-gray" src="{% static 'assets/img/logo.png' %}" alt="...">
+                    <h5 style="color:#0084CF" class="title">Winx </h5>
+                  </a>
 
-				  </div>
-				</div>
-			</div>
-		</div>
-			
-		<div style="height:100%; background-color:white; border-radius:10px; text-align:center">
-				<p class="navbar-brand">Produtos disponíveis</p>
-			<div class="content">
-				<div class="row">
-				  <div class="col-lg-3 col-md-6 col-sm-6">
-					<div class="card card-stats">
-					  <div class="card-body ">
-						<div class="row">
-							<center>
-							  <img style="height:100%; width:60%; justify-align:center" src="../assets/img/01.jpg"">
+                </div>
+                <p class="description text-center">
+                  Venda de brinquedos por atacado<br>
+                  <img style="height:30px;" src="{% static 'assets/img/estrelas.png' %}">
+                </p>
+              </div>
+              <div class="card-footer">
+                <hr>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="height:100%; background-color:white; border-radius:10px; text-align:center">
+          <p class="navbar-brand">Produtos disponíveis</p>
+          <div class="content">
+            <div class="row">
+              <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="card card-stats">
+                  <div class="card-body ">
+                    <div class="row">
+                      <center>
+                        <img style="height:100%; width:60%; justify-align:center" src="{% static 'assets/img/01.jpg' %}">
 							</center>
-						  <div class="col-7 col-md-8">
-							<div class="numbers">
-							  <p class="card-title">Título<p>
-							</div>
-						  </div>
-						</div>
-					  </div>
-					  <div class="card-footer ">
-						<hr>
-						<div class="stats">
-						  <i class="fa fa-refresh"></i>
-						  R$ 120,00
-						</div>
-					  </div>
-					</div>
-				  </div>
-				  <div class="col-lg-3 col-md-6 col-sm-6">
-					<div class="card card-stats">
-					  <div class="card-body ">
-						<div class="row">
-											<center>
-							  <img style="height:100%; width:60%; justify-align:center" src="../assets/img/04.webp">
-							</center>
-						  <div class="col-7 col-md-8">
-							<div class="numbers">
-							  <p class="card-title">Título<p>
-							</div>
-						  </div>
-						</div>
-					  </div>
-					  <div class="card-footer ">
-						<hr>
-						<div class="stats">
-						  <i class="fa fa-refresh"></i>
-						  R$ 120,00
-						</div>
-					  </div>
-					</div>
-				  </div>
-				  <div class="col-lg-3 col-md-6 col-sm-6">
-					<div class="card card-stats">
-					  <div class="card-body ">
-						<div class="row">
-						<center>
-						<img style="height:100%; width:60%; justify-align:center" src="../assets/img/02.jpg">
-							</center>
-						  <div class="col-7 col-md-8">
-							<div class="numbers">
-							  <p class="card-title">Título<p>
-							</div>
-						  </div>
-						</div>
-					  </div>
-					  <div class="card-footer ">
-						<hr>
-						<div class="stats">
-						  <i class="fa fa-refresh"></i>
-						  R$ 120,00
-						</div>
-					  </div>
-					</div>
-				  </div>
-					<div class="col-lg-3 col-md-6 col-sm-6">
-						<div class="card card-stats">
-						  <div class="card-body ">
-							<div class="row">
-												<center>
-								  <img style="height:100%; width:60%; justify-align:center" src="../assets/img/03.jpg"">
+						  <div class=" col-7 col-md-8">
+                        <div class="numbers">
+                          <p class="card-title">Título
+                          <p>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer ">
+                  <hr>
+                  <div class="stats">
+                    <i class="fa fa-refresh"></i>
+                    R$ 120,00
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="card card-stats">
+                <div class="card-body ">
+                  <div class="row">
+                    <center>
+                      <img style="height:100%; width:60%; justify-align:center" src="{% static 'assets/img/04.webp' %}">
+                    </center>
+                    <div class="col-7 col-md-8">
+                      <div class="numbers">
+                        <p class="card-title">Título
+                        <p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer ">
+                  <hr>
+                  <div class="stats">
+                    <i class="fa fa-refresh"></i>
+                    R$ 120,00
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="card card-stats">
+                <div class="card-body ">
+                  <div class="row">
+                    <center>
+                      <img style="height:100%; width:60%; justify-align:center" src="{% static 'assets/img/02.jpg' %}">
+                    </center>
+                    <div class="col-7 col-md-8">
+                      <div class="numbers">
+                        <p class="card-title">Título
+                        <p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer ">
+                  <hr>
+                  <div class="stats">
+                    <i class="fa fa-refresh"></i>
+                    R$ 120,00
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="card card-stats">
+                <div class="card-body ">
+                  <div class="row">
+                    <center>
+                      <img style="height:100%; width:60%; justify-align:center" src="{% static 'assets/img/03.jpg' %}">
 								</center>
-							  <div class="col-7 col-md-8">
-								<div class="numbers">
-								  <p class="card-title">Título<p>
-								</div>
-							  </div>
-							</div>
-						  </div>
-						  <div class="card-footer ">
-							<hr>
-							<div class="stats">
-							  <i class="fa fa-refresh"></i>
-							  R$ 120,00
-							</div>
-						  </div>
-					  </div>
-					</div>
+							  <div class=" col-7 col-md-8">
+                      <div class="numbers">
+                        <p class="card-title">Título
+                        <p>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer ">
+                <hr>
+                <div class="stats">
+                  <i class="fa fa-refresh"></i>
+                  R$ 120,00
+                </div>
+              </div>
+            </div>
+          </div>
 
-				</div>
-			</div>
-		</div>
+        </div>
+      </div>
     </div>
-    </div>
+  </div>
+  </div>
   </div>
 
 
   <!--   Core JS Files   -->
-  <script src="../assets/js/core/jquery.min.js"></script>
-  <script src="../assets/js/core/popper.min.js"></script>
-  <script src="../assets/js/core/bootstrap.min.js"></script>
-  <script src="../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <script src="{% static 'assets/js/core/jquery.min.js' %}"></script>
+  <script src="{% static 'assets/js/core/popper.min.js' %}"></script>
+  <script src="{% static 'assets/js/core/bootstrap.min.js' %}"></script>
+  <script src="{% static 'assets/js/plugins/perfect-scrollbar.jquery.min.js' %}"></script>
   <!--  Google Maps Plugin    -->
   <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
   <!-- Chart JS -->
-  <script src="../assets/js/plugins/chartjs.min.js"></script>
+  <script src="{% static 'assets/js/plugins/chartjs.min.js' %}"></script>
   <!--  Notifications Plugin    -->
-  <script src="../assets/js/plugins/bootstrap-notify.js"></script>
+  <script src="{% static 'assets/js/plugins/bootstrap-notify.js' %}"></script>
   <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
-  <script src="../assets/js/paper-dashboard.min.js?v=2.0.1" type="text/javascript"></script><!-- Paper Dashboard DEMO methods, don't include it in your project! -->
-  <script src="../assets/demo/demo.js"></script>
+  <script src="{% static 'assets/js/paper-dashboard.min.js' %}" type="text/javascript"></script>
+  <!-- Paper Dashboard DEMO methods, don't include it in your project! -->
+  <script src="{% static 'assets/demo/demo.js' %}"></script>
 </body>
 
 </html>
