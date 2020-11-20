@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from .models import loja
+from .form import lojaForm
 from models import produto
 from .form import produtoForm
 
@@ -38,3 +40,13 @@ def novo_produto(request):
         form.save()
     data['form'] = form
     return render(request, 'produto/form.html',data)
+
+def nova_loja(request):
+    data_loja = {}
+    form = lojaForm(request.POST or None)
+
+    if form.is_valid():
+        form.save()
+         
+    data_loja['form'] = form
+    return render(request, 'loj/form.html', data_loja)

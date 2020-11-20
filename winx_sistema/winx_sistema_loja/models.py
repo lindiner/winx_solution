@@ -1,4 +1,5 @@
 from django.db import models
+from .form import lojaForm
 
 
 class usuario(models.Model):
