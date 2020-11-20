@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from models import produto
+from .form import produtoForm
 
 def home(request):
     return render(request, 'winx_sistema_loja/index.html')
@@ -26,3 +28,13 @@ def visualizar_loja(request):
 
 def estoque(request):
     return render(request, 'winx_sistema_loja/vendedor/estoque.html')
+
+
+def novo_produto(request):
+    data = {}
+    form = produtoForm(request.Post or None)
+
+    if form.is_valid():
+        form.save()
+    data['form'] = form
+    return render(request, 'produto/form.html',data)
