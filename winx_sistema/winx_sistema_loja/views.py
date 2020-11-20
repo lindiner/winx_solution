@@ -1,9 +1,7 @@
 from django.shortcuts import render
-from .models import loja
-from .form import lojaForm
-from models import produto
+from .models import loja, produto, usuario
+from .form import lojaForm 
 from .form import produtoForm
-from .models import usuario
 from .form import usuarioForm
 
 def home(request):
