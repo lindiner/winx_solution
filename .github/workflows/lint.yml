@@ -18,7 +18,10 @@ jobs:
         with:
           python-version: 3.7
       - name: install requirements
-        run: python -m pip install --upgrade pip | pip install -r requirements.txt
-      - uses: ricardochaves/python-lint@master
-        with:
-          python-root-list: 'winx_sistema/winx_sistema_loja winx_sistema/winx_sistema'
+        run: |
+          python -m pip install --upgrade pip 
+          pip install -r requirements.txt
+      - name: pyLint runner
+        run: |
+            python lint.py -p ./winx_sistema/winx_sistema -t 7
+            python lint.py -p ./winx_sistema/winx_sistema_loja -t 3
