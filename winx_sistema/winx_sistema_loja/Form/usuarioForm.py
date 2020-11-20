@@ -1,11 +1,11 @@
 from django.forms import ModelForm
-from.models import usuario
-from.model import loginAcessoS
+from winx_sistema_loja.models import usuario
+from winx_sistema_loja.models import loginAcessoS
 
 class usuarioForm(ModelForm):
     class Meta:
         model = usuario
-        fields = ['idPessoa', 'name', 'email','idade', 'cpf', 'cep', 'endereco', 'bairro', 'cidade', 'estado'] 
+        fields = ['name', 'email','idade', 'cpf', 'cep', 'endereco', 'bairro', 'cidade', 'estado'] 
 
 
 class usuarioLoginForm(ModelForm):
@@ -13,7 +13,3 @@ class usuarioLoginForm(ModelForm):
         model = loginAcessoS
         fields = ['login', 'senha']
 
-
-
-
-    
