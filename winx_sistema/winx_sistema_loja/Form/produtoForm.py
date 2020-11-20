@@ -1,8 +1,10 @@
 from django.forms import ModelForm
-from.models import produto
+from winx_sistema_loja.models import produto
 
 class produtoForm(ModelForm):
     class Meta:
         model = produto
-        fields = ['idProduto','name','precoProduto','codigoProduto','quantidadeEstoque','corProduto','tamanho']
+        fields = ['name','precoProduto','codigoProduto','quantidadeEstoque','corProduto','tamanho']
+
+  
         
