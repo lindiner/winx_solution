@@ -16,8 +16,8 @@ def criar_lojinha(request):
 def user(request):
     return render(request, 'winx_sistema_loja/vendedor/user.html')
  
-def dashboard(request):
-    return render(request, 'winx_sistema_loja/vendedor/dashboard.html')
+def produtos(request):
+    return render(request, 'winx_sistema_loja/vendedor/produtos.html')
 
 def pedidos(request):
     return render(request, 'winx_sistema_loja/vendedor/pedidos.html')
