@@ -12,13 +12,36 @@ Dessa forma, além de o lojista poder diminuir o impacto causado pela quarentena
 
 Primeiro você acessa o site e, caso já possua um cadastro, já pode entrar.
 
+![Página de login](https://raw.githubusercontent.com/lindiner/winx_solution/main/screenshots/01.png)
+
 Caso precise se cadastrar, precisaremos de alguns de seus dados primeiro...
 
+![Página de cadastro de usuário](https://raw.githubusercontent.com/lindiner/winx_solution/main/screenshots/02.png)
+
 ... e depois de detalhes da sua loja!
+![Página de cadastro de loja](https://raw.githubusercontent.com/lindiner/winx_solution/main/screenshots/03.png)
 
 Por fim, na página principal, você poderá ter uma visão geral de sua loja com pontos importantes destacados!
 
-Mas não se preocupe, caso queira ver mais detalhes, temos páginas para isso também!
+![Homepage](https://raw.githubusercontent.com/lindiner/winx_solution/main/screenshots/04.png)
+
+Mas não se preocupe, caso queira ver mais detalhes, temos páginas para isso também, como a página de pedidos:
+
+![Página de pedidos](https://raw.githubusercontent.com/lindiner/winx_solution/main/screenshots/05.png)
+
+A página de estoque:
+
+![Página de estoque](https://raw.githubusercontent.com/lindiner/winx_solution/main/screenshots/06.png)
+
+A página de notificações:
+
+![Página de notificações](https://raw.githubusercontent.com/lindiner/winx_solution/main/screenshots/07.png)
+
+E a página de controle da loja:
+
+![Página de controle da loja](https://raw.githubusercontent.com/lindiner/winx_solution/main/screenshots/08.png)
+
+Viu só como é fácil? Ainda assim, se por algum motivo algo não estiver claro, você pode conversar através de um chat com a própria Magalu! Ela adora ajudar e estará sempre disponível!
 
 ### A especificação do projeto está apresentada abaixo
 
