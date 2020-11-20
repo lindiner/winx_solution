@@ -1,9 +1,6 @@
 from django.db import models
-from .form import lojaForm
-
 
 class usuario(models.Model):
-    idPessoa = models.UUIDField(primary_key=True)
     name = models.CharField(max_length=128)
     email = models.EmailField( max_length=254)
     idade = models.DateField()
@@ -13,6 +10,7 @@ class usuario(models.Model):
     bairro = models.CharField( max_length=50)
     cidade = models.CharField( max_length=50)
     estado = models.CharField(max_length=40)
+    fotoUsuario = models.ImageField(default='' , upload_to=None, height_field=None, width_field=None, max_length=None)
 
     
 
@@ -30,7 +28,6 @@ class loginAcessoS(models.Model):
 
 
 class loja(models.Model):
-    idLoja = models.UUIDField(primary_key=True)
     nameLoja = models.CharField(max_length=128)
     emailLoja = models.EmailField( max_length=254)
     telefoneLoja = models.IntegerField()
@@ -44,7 +41,6 @@ class categoria(models.Model):
     dt_criacao = models.DateTimeField(auto_now_add=False)
 
 class produto(models.Model):
-    idProduto = models.UUIDField(primary_key=True, default='')
     name = models.CharField(max_length=58,default='' )
     precoProduto = models.DecimalField(max_digits=5, decimal_places=2, null=True)
     codigoProduto = models.IntegerField(default='')
@@ -59,6 +55,7 @@ class produto(models.Model):
 
     status = models.CharField(max_length=15, choices=STATUS)
     vendedorCod = models.ForeignKey(vendedor,on_delete=models.CASCADE)
+    foto = models.ImageField(default='' ,upload_to=None, height_field=None, width_field=None, max_length=None)
     
     def __str__(self):
         return f'{self.idProduto} ({self.vendedor.codVendedor})'
@@ -68,8 +65,6 @@ class avaliacao(models.Model):
     comentario = models.TextField(max_length=240)
     categoriaAvaliacao = models.ForeignKey(categoria,on_delete=models.CASCADE)
     produtoAvaliado = models.ForeignKey(produto,on_delete=models.CASCADE)
-
-
 
 
 class transacao(models.Model):
