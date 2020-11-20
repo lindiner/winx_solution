@@ -10,7 +10,7 @@ def home(request):
     return render(request, 'winx_sistema_loja/index.html')
 
 def cadastro(request):
-    return render(request, 'winx_sistema_loja/cadastrese.html')
+    return render(request, 'winx_sistema_loja/cadastro.html')
 
 def criar_lojinha(request):
     return render(request, 'winx_sistema_loja/criar_lojinha.html')
@@ -27,8 +27,8 @@ def pedidos(request):
 def notificacoes(request):
     return render(request, 'winx_sistema_loja/vendedor/notificacoes.html')
 
-def visualizar_loja(request):
-    return render(request, 'winx_sistema_loja/vendedor/visualizar_loja.html')
+def loja(request):
+    return render(request, 'winx_sistema_loja/vendedor/loja.html')
 
 def estoque(request):
     return render(request, 'winx_sistema_loja/vendedor/estoque.html')
