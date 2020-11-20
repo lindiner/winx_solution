@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from .models import loja
 from .form import lojaForm
-from models import produto
+from .models import produto
 from .form import produtoForm
 from .models import usuario
 from .form import usuarioForm
@@ -73,3 +73,4 @@ def novo_login(request):
          
     data_login['form'] = form
     return render(request, 'loj/form.html', data_login)
+
