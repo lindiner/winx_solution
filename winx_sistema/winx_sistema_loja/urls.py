@@ -1,0 +1,15 @@
+from django.urls import path
+from.import views
+
+urlpatterns = [
+    path('', views.home, name='winx_sistema-home'),
+    path('cadastro/', views.cadastro, name='winx_sistema-cadastro'),
+    path('criar_lojinha/', views.criar_lojinha, name='winx_sistema-cria_lojinha'),
+    path('user/', views.user, name='winx_sistema-user'),
+    path('dashboard/', views.dashboard, name='winx_sistema-dashboard'),
+    path('pedidos/', views.pedidos, name='winx_sistema-pedidos'),
+    path('notificacoes/', views.notificacoes, name='winx_sistema-notificacoes'),
+    path('visualizar_loja/', views.visualizar_loja, name='winx_sistema-visualizar_loja'),
+    path('estoque/', views.estoque, name='winx_sistema-estoque'),
+    
+]
