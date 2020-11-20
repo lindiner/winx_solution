@@ -3,6 +3,8 @@ from .models import loja
 from .form import lojaForm
 from models import produto
 from .form import produtoForm
+from .models import usuario
+from .form import usuarioForm
 
 def home(request):
     return render(request, 'winx_sistema_loja/index.html')
@@ -50,3 +52,13 @@ def nova_loja(request):
          
     data_loja['form'] = form
     return render(request, 'loj/form.html', data_loja)
+
+def novo_usuario(request):
+    data_usuario = {}
+    form = usuarioForm(request.POST or None)
+
+    if form.is_valid():
+        form.save()
+         
+    data_usuario['form'] = form
+    return render(request, 'loj/form.html', data_usuario)
