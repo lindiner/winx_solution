@@ -44,6 +44,7 @@ E a página de controle da loja:
 ![Página de controle da loja](https://raw.githubusercontent.com/lindiner/winx_solution/main/screenshots/08.png)
 
 Viu só como é fácil? Ainda assim, se por algum motivo algo não estiver claro, você pode conversar através de um chat com a própria Magalu! Ela adora ajudar e estará sempre disponível! :information_desk_person:
+
 ![Conversa com o bot](https://raw.githubusercontent.com/lindiner/winx_solution/main/screenshots/magalu%20gif.gif)
 
 ## :star_struck: O que devo fazer para testar o projeto?
