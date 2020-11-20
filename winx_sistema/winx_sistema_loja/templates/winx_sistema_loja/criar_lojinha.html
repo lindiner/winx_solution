@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 	<head>
@@ -6,10 +7,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<!-- LINEARICONS -->
-		<link rel="stylesheet" href="fonts/linearicons/style.css">
+		<link rel="stylesheet" href="{% static 'fonts/linearicons/style.css' %}">
 		
 		<!-- STYLE CSS -->
-		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="{% static 'css/style.css' %}">
 		
 
 
@@ -20,13 +21,13 @@
 		<div class="fundo">
 			<div class="wrapper">
 				<div class="inner">
-					<img src="images/Aproveite.png" alt="" class="image-entregas">
-					<img src="images/caminhão.png" alt="" class="image-caminhao">
+					<img src="{% static 'images/Aproveite.png' %}" alt="" class="image-entregas">
+					<img src="{% static 'images/caminhão.png' %}" alt="" class="image-caminhao">
 
-					<form action="nivel_vendedor/html/dashboard.html"> <!-- inserir aqui a função do cadastro -->
+					<form action="{% static 'nivel_vendedor/html/dashboard.html' %}"> <!-- inserir aqui a função do cadastro -->
 						
 						<h1 style="text-align:center"> Dados da sua loja </h1> <br>
-						<img src="images/store.jpg" alt="" class="image-store">
+						<img src="{% static 'images/store.jpg' %}" alt="" class="image-store">
 
 						<!--<img src="images/fases.png" alt="">-->
 						<div class="form-holder">
@@ -66,9 +67,9 @@
 			</div>
 		</div>
 
-			<img src="images/luiza.png" class="luiza">
+			<img src="{% static 'images/luiza.png' %}" class="luiza">
 		
-		<script src="js/jquery-3.3.1.min.js"></script>
-		<script src="js/main.js"></script>
+		<script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+		<script src="{% static 'js/main.js' %}"></script>
 	</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 </html>

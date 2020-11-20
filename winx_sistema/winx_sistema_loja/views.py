@@ -9,7 +9,7 @@ def cadastro(request):
     return render(request, 'winx_sistema_loja/cadastrese.html')
 
 def criar_lojinha(request):
-    return render(request, 'winx_sistema_loja/criar-lojinha.html')
+    return render(request, 'winx_sistema_loja/criar_lojinha.html')
 
 def user(request):
     return render(request, 'winx_sistema_loja/vendedor/user.html')
