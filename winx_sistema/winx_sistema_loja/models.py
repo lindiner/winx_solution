@@ -55,7 +55,7 @@ class produto(models.Model):
         )
 
     status = models.CharField(max_length=15, choices=STATUS)
-    vendedorCod = models.ForeignKey(vendedor,on_delete=models.CASCADE)
+    vendedorCod = models.IntegerField(vendedor,null=True,blank=True)
     foto = models.ImageField(null=True,blank=True, default='' ,upload_to=None, height_field=None, width_field=None, max_length=None)
     
     def __str__(self):
