@@ -137,25 +137,16 @@ Requisito obrigatório | Cumprimento
 Rendering templates | :heavy_check_mark:
 Representação de dados | :heavy_check_mark:
 Cadastrar produto | :heavy_check_mark:
-Atualizar produto | :o:
 Consultar produto | :heavy_check_mark:
-Inativar produto | :o:
 
 Requisito opcional | Cumprimento
 ------------------ | -----------
-Testes unitários |  :x:
 CI | :heavy_check_mark:
 Versionamento | :heavy_check_mark:
-API seller |  :x:
 
 Extras | Cumprimento
 ------ | -----------
 Cadastro | :heavy_check_mark:
 Chatbot | :heavy_check_mark: 
-Sistema de Recomendação | :x:
 Documentação Completa | :heavy_check_mark:
-
-**Legenda:**
-:heavy_check_mark: - Feito
-:o: - Feito mas não completo
-:x: - Não feito
+UX | :heavy_check_mark:
