@@ -8,6 +8,8 @@ Em 2020 muitas pessoas foram atingidas pela pandemia de Covid-19. A impossibilid
 
 Dessa forma, além de o lojista poder diminuir o impacto causado pela quarentena; o catálogo do site da Magalu também se expande, o que beneficia os clientes. Além disso, com vários negócios locais participando dessa iniciativa, o sistema de compras e entregas pode ser otimizado, diminuindo o preço de fretes e o tempo de entrega e beneficiando os pequenos negócios locais.
 
+![Landing magalu](https://raw.githubusercontent.com/lindiner/winx_solution/main/screenshots/LandingMagalu_.png)
+
 ## :thinking: Como funciona?
 
 **É bem simples!**
@@ -45,7 +47,7 @@ E a página de controle da loja:
 
 Viu só como é fácil? Ainda assim, se por algum motivo algo não estiver claro, você pode conversar através de um chat com a própria Magalu! Ela adora ajudar e estará sempre disponível! :information_desk_person:
 
-<div style="text-align:center"><img src="https://raw.githubusercontent.com/lindiner/winx_solution/main/screenshots/magalu%20gif.gif"/></div>
+![Conversa com o chatbot](https://raw.githubusercontent.com/lindiner/winx_solution/main/screenshots/magalu%20gif.gif")
 
 ## :star_struck: O que devo fazer para testar o projeto?
 
