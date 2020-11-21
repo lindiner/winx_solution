@@ -6,4 +6,3 @@ class lojaForm(ModelForm):
         model = loja
         fields = ['nameLoja','emailLoja','telefoneLoja', 'cep','endereco', 'bairro','cidade'] 
 
- 

@@ -1,11 +1,12 @@
 from django.forms import ModelForm
 from winx_sistema_loja.models import usuario
 from winx_sistema_loja.models import loginAcessoS
+from django.contrib.auth.forms import UserCreationForm
 
-class usuarioForm(ModelForm):
+class UsuarioForm(ModelForm):
     class Meta:
         model = usuario
-        fields = ['name', 'email','idade', 'cpf', 'cep', 'endereco', 'bairro', 'cidade', 'estado'] 
+        fields = ['name', 'email','idade', 'endereco', 'cpf'] 
 
 
 class usuarioLoginForm(ModelForm):
