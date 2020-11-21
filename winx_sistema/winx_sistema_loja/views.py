@@ -8,6 +8,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 
+
 def home(request):
     return render(request, 'winx_sistema_loja/index.html')
 
@@ -89,4 +90,4 @@ def novo_login(request):
          
     data_login['form'] = form
     return render(request, 'loja/form.html', data_login)
-    
+

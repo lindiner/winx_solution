@@ -25,3 +25,4 @@ jobs:
         run: |
             python lint.py -p ./winx_sistema/winx_sistema -t 7
             python lint.py -p ./winx_sistema/winx_sistema_loja -t 0.5
+

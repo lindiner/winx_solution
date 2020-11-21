@@ -3,7 +3,6 @@ from winx_sistema_loja.models import usuario
 from winx_sistema_loja.models import loginAcessoS
 from django.contrib.auth.forms import UserCreationForm
 
-
 class UsuarioForm(ModelForm):
     class Meta:
         model = usuario
@@ -15,6 +14,3 @@ class usuarioLoginForm(ModelForm):
         model = loginAcessoS
         fields = ['login', 'senha']
 
-
-
-    

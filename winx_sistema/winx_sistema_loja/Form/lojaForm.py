@@ -5,3 +5,4 @@ class lojaForm(ModelForm):
     class Meta:
         model = loja
         fields = ['nameLoja','emailLoja','telefoneLoja', 'cep','endereco', 'bairro','cidade'] 
+
