@@ -3,7 +3,7 @@ from django.db import models
 class usuario(models.Model):
     name = models.CharField(max_length=128)
     email = models.EmailField( max_length=254)
-    idade = models.DateField()
+    idade = models.IntegerField()
     cpf = models.CharField(max_length=14,null=False,blank=False)
     cep = models.CharField(max_length=8,null=False,blank=False)
     endereco = models.CharField(max_length=50)
@@ -11,7 +11,9 @@ class usuario(models.Model):
     cidade = models.CharField( max_length=50)
     estado = models.CharField(max_length=40)
     fotoUsuario = models.ImageField(default='' , upload_to=None, height_field=None, width_field=None, max_length=None)
-
+    
+    def __str__(self):
+        return self.name
     
 
 class vendedor(models.Model):
@@ -41,12 +43,11 @@ class categoria(models.Model):
     dt_criacao = models.DateTimeField(auto_now_add=False)
 
 class produto(models.Model):
+    
     name = models.CharField(max_length=58,default='' )
     precoProduto = models.DecimalField(max_digits=5, decimal_places=2, null=True)
     codigoProduto = models.IntegerField(default='')
     quantidadeEstoque = models.IntegerField(null=True)
-    corProduto = models.CharField(max_length=50, null=True)
-    tamanho = models.IntegerField(null=True)
 
     STATUS = (
         ('active', 'Ativo'),
@@ -55,10 +56,10 @@ class produto(models.Model):
 
     status = models.CharField(max_length=15, choices=STATUS)
     vendedorCod = models.ForeignKey(vendedor,on_delete=models.CASCADE)
-    foto = models.ImageField(default='' ,upload_to=None, height_field=None, width_field=None, max_length=None)
+    foto = models.ImageField(null=True,blank=True, default='' ,upload_to=None, height_field=None, width_field=None, max_length=None)
     
     def __str__(self):
-        return f'{self.idProduto} ({self.vendedor.codVendedor})'
+        return self.name
 
 class avaliacao(models.Model):
     nota = models.IntegerField()

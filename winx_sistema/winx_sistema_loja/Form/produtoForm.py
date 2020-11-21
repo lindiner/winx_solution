@@ -1,8 +1,10 @@
 from django.forms import ModelForm
-from.models import produto
+from winx_sistema_loja.models import produto
+from django.contrib.auth.forms import UserCreationForm
 
-class produtoForm(ModelForm):
+class ProdutoForm(ModelForm):
     class Meta:
         model = produto
-        fields = ['idProduto','name','precoProduto','codigoProduto','quantidadeEstoque','corProduto','tamanho']
+        fields = ['name','precoProduto','codigoProduto','quantidadeEstoque']
+
         

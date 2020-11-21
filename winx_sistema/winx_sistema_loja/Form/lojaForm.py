@@ -1,8 +1,7 @@
 from django.forms import ModelForm
-from.models import loja
+from winx_sistema_loja.models import loja
 
 class lojaForm(ModelForm):
     class Meta:
         model = loja
-        fields = ['idLoja','nameLoja','emailLoja','telefoneLoja', 'cep','endereco', 'bairro','cidade'] 
- 
+        fields = ['nameLoja','emailLoja','telefoneLoja', 'cep','endereco', 'bairro','cidade'] 

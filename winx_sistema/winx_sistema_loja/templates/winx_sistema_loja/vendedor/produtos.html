@@ -391,7 +391,10 @@
                 <strong><h4 class="card-title" style="color:blue"> Adicionar um novo produto</h4></strong>
               </div>
               <div class="card-body">
-                <form action="/dashboard">
+                <form action="{% url 'winx_sistema-produtos'%}"  method="POST">
+					{% csrf_token %} 
+					{{ form.errors }}
+					{{ form.non_field_errors }}
 					<div class="form-holder">
 						<span class="lnr lnr-user"></span>
 						
@@ -404,25 +407,25 @@
 					<br>
 					<div class="form-holder">
 						<span class="lnr lnr-user"></span>
-						<input type="text" class="form-control" placeholder="Nome">
+						<input type="text" class="form-control" name="name" placeholder="Nome">
 					</div>	<br>
 					<div class="form-holder">
 						<span class="lnr lnr-user"></span>
-						<input type="number" class="form-control" placeholder="Preço">
+						<input type="number" class="form-control" name="precoProduto" placeholder="Preço">
 					</div>	<br>
 					<div class="form-holder">
 						<span class="lnr lnr-user"></span>
-						<input type="number" class="form-control" placeholder="Código do produto">
+						<input type="number" class="form-control" name="codigoProduto" placeholder="Código do produto">
 					</div>	<br>
 					<div class="form-holder">
 						<span class="lnr lnr-user"></span>
-						<input type="number" class="form-control" placeholder="Quantidade estoque">
+						<input type="number" class="form-control" name="quantidadeEstoque" placeholder="Quantidade estoque">
 					</div>
 						
 					<div class="form-holder">
 
-						<button style="color:white; height:31px; border:white; background-color:green"><i class="fa fa-fw fa-edit"></i>
-							<span >Adicionar</span>
+						<button type="subimt" style="color:white; height:31px; border:white; background-color:green"><i class="fa fa-fw fa-edit"></i>
+							Adicionar
 						</button>
 						
 						<a href="#" style="color:white; background-color:red" onclick="toggle()">
@@ -449,7 +452,10 @@
 					<strong><h4 class="card-title" style="color:blue"> Adicionar uma nova categoria</h4></strong>
 				  </div>
 				  <div class="card-body">
-					<form action="/dashboard">
+					<form action="{% url 'winx_sistema-produtos'%}"  method="POST">
+						{% csrf_token %} 
+						{{ form.errors }}
+						{{ form.non_field_errors }}>
 						<div class="form-holder">
 							<span class="lnr lnr-user"></span>
 							<input type="text" class="form-control" placeholder="Nome">

@@ -1,16 +1,31 @@
-from django.shortcuts import render
-from .models import loja
-from .form import lojaForm
-from models import produto
-from .form import produtoForm
-from .models import usuario
-from .form import usuarioForm
+from django.shortcuts import render, redirect
+from .models import loja, produto, usuario
+from .form import lojaForm 
+from .form.produtoForm import ProdutoForm
+from .form.usuarioForm import UsuarioForm
+from django.contrib import messages
+from django.contrib.auth.forms import UserCreationForm
+from django.http import HttpResponseRedirect
+from django.urls import reverse
 
 def home(request):
     return render(request, 'winx_sistema_loja/index.html')
 
 def cadastro(request):
-    return render(request, 'winx_sistema_loja/cadastro.html')
+
+    if request.method == 'POST':
+        form = UsuarioForm(request.POST)
+
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect(reverse('winx_sistema-cria_lojinha'))
+
+    else: 
+        form = UsuarioForm()
+    
+    
+    return render(request, 'winx_sistema_loja/cadastro.html', {'form':form})
+
 
 def criar_lojinha(request):
     return render(request, 'winx_sistema_loja/criar_lojinha.html')
@@ -19,7 +34,20 @@ def user(request):
     return render(request, 'winx_sistema_loja/vendedor/user.html')
  
 def produtos(request):
-    return render(request, 'winx_sistema_loja/vendedor/produtos.html')
+    
+    if request.method == 'POST':
+        form = ProdutoForm(request.POST)
+
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect(reverse('winx_sistema-estoque'))
+
+    else: 
+        form = ProdutoForm()
+    
+    
+    return render(request, 'winx_sistema_loja/vendedor/produtos.html', {'form':form})
+
 
 def pedidos(request):
     return render(request, 'winx_sistema_loja/vendedor/pedidos.html')
@@ -32,7 +60,6 @@ def loja(request):
 
 def estoque(request):
     return render(request, 'winx_sistema_loja/vendedor/estoque.html')
-
 
 def novo_produto(request):
     data = {}
@@ -51,18 +78,7 @@ def nova_loja(request):
         form.save()
          
     data_loja['form'] = form
-    return render(request, 'loj/form.html', data_loja)
-
-def novo_vendedor(request):
-    data_usuario = {}
-    form = usuarioForm(request.POST or None)
-
-    if form.is_valid():
-        form.save()
-         
-    data_usuario['form'] = form
-    return render(request, 'loj/form.html', data_usuario)
-
+    return render(request, 'loja/form.html', data_loja)
 
 def novo_login(request):
     data_login = {}
@@ -72,4 +88,5 @@ def novo_login(request):
         form.save()
          
     data_login['form'] = form
-    return render(request, 'loj/form.html', data_login)
+    return render(request, 'loja/form.html', data_login)
+    

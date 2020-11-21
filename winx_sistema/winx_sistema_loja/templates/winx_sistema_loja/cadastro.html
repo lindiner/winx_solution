@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<link rel="apple-touch-icon" sizes="76x76" href="{% static 'assets/img/apple-icon.png' %}">
-		<link rel="icon" type="image/png" href="{% static 'assets/img/favicon.png">
+		<link rel="icon" type="image/png" href="{% static 'assets/img/favicon.png' %}">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
 		<!-- LINEARICONS -->
@@ -23,43 +23,47 @@
 			<div class="inner">
 				<img src="{% static 'images/Magalu.png' %}" alt="" class="image-1">
 				<img src="{% static 'images/tag.png' %}" alt="" class="image-tag">
-				<form action="/criar_lojinha"> <!-- inserir aqui a função do cadastro -->
+				<form   action="{% url 'winx_sistema-cadastro'%}"  method="POST"> <!-- inserir aqui a função do cadastro -->
+					{% csrf_token %} 
+					{{ form.errors }}
+					{{ form.non_field_errors }}
 					<img src="{% static 'images/logo_parceiros.png' %}" alt="">
 					<!--<img src="images/fases.png" alt="">-->
 					<div class="form-holder">
 						<span class="lnr lnr-user"></span>
-						<input type="text" class="form-control" placeholder="Nome">
+						<input type="text" class="form-control" name="name" placeholder="Nome">
 					</div>
 					
 					<div class="form-holder">
 						<span class="lnr lnr-envelope"></span>
-						<input type="mail" class="form-control" placeholder="E-mail">
+						<input type="mail" class="form-control" name="email" placeholder="E-mail">
 					</div>
 					
 					
 					<div class="form-holder">
 						<span class="lnr lnr-calendar-full"></span>
-						<input type="number" class="form-control" placeholder="Idade">
+						<input type="number" class="form-control" name="idade" placeholder="Idade">
 					</div>
 					
 					<div class="form-holder">
 						<span class="lnr lnr-home"></span>
-						<input type="text" class="form-control" placeholder="Endereço completo">
+						<input type="text" class="form-control" name="endereco" placeholder="Endereço completo">
 					</div>
 					
 					<div class="form-holder">
 						<span class="lnr lnr-user"></span>
-						<input type="number" class="form-control" placeholder="CPF/CNPJ">
+						<input type="number" class="form-control" name="cpf" placeholder="CPF/CNPJ">
 					</div>
-					
 					
 					<div class="form-holder">
 						<span class="lnr lnr-lock"></span>
-						<input type="password" class="form-control" placeholder="Senha">
+						<input type="password" class="form-control" name="senha" placeholder="Senha">
 					</div>
+
 					<h6><a href="/"> Já tem cadastro? Acesse! </a></h6>
-					<button >
-						<span>Criar sua loja </span>
+					
+					<button type="submit">
+						Criar sua loja
 					</button>
 
 		
