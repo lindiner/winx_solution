@@ -5,6 +5,5 @@ from django.contrib.auth.forms import UserCreationForm
 class ProdutoForm(ModelForm):
     class Meta:
         model = produto
-        fields = ['name','precoProduto','codigoProduto','quantidadeEstoque']
 
-        
+        fields = ['name','precoProduto','codigoProduto','quantidadeEstoque']

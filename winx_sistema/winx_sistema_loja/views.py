@@ -9,6 +9,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 
+
 def home(request):
     if request.method == 'POST':
         form = UsuarioLoginForm(request.POST)
@@ -75,4 +76,13 @@ def loja(request,id):
 def estoque(request):
     produtos = produto.objects.all()
 
+<<<<<<< HEAD
     return render(request, 'winx_sistema_loja/vendedor/estoque.html', {'produtos':produtos})
+=======
+    if form.is_valid():
+        form.save()
+         
+    data_login['form'] = form
+    return render(request, 'loja/form.html', data_login)
+
+>>>>>>> e6e713c597abb77099a2332d002362a19f9bbe26
