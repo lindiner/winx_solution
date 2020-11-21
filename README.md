@@ -135,8 +135,11 @@ Requisitos não obrigatórios:
 Requisito obrigatório | Cumprimento
 --------------------- | -----------
 Rendering templates | :heavy_check_mark:
-Representação | :heavy_check_mark:
-CRUD | :heavy_check_mark:
+Representação de dados | :heavy_check_mark:
+Cadastrar produto | :heavy_check_mark:
+Atualizar produto | :heavy_check_mark:
+Consultar produto | :heavy_check_mark:
+Inativar produto | :heavy_check_mark:
 
 Requisito opcional | Cumprimento
 ------------------ | -----------
@@ -147,7 +150,7 @@ API seller |  :x:
 
 Extras | Cumprimento
 ------ | -----------
-Cadastro e login | :heavy_check_mark:
+Cadastro | :heavy_check_mark:
 Chatbot | :heavy_check_mark: 
 Sistema de Recomendação | :x:
 Documentação Completa | :heavy_check_mark:
