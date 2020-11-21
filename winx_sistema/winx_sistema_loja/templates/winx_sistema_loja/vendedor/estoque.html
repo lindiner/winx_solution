@@ -19,7 +19,7 @@ Coded by www.creative-tim.com
 <head>
   <meta charset="utf-8" />
   <link rel="apple-touch-icon" sizes="76x76" href="{% static 'assets/img/apple-icon.png' %}">
-  <link rel="icon" type="image/png" href="{% static 'assets/img/favicon.png">
+  <link rel="icon" type="image/png" href="{% static 'assets/img/favicon.png'%}">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
     Magazine Luiza
@@ -163,44 +163,34 @@ Coded by www.creative-tim.com
               <div class="card-body">
                 <div class="table-responsive" >
                   <table class="table" >
-                    <thead style="color:#0082F7; text-align:center">
-                      <th>
-
-						<select style="color:#0082F7; font-family:Arial black; font-size:14px" name="select">
-						
-						  <option value="" selected>Categoria</option>
-						  <option value="valor1">Brinquedos</option> 
-						  <option value="valor3">Eletrônicos</option>
-						</select>
-                      </th>
-                      <th>
-                        Produto
-                      </th>
-                      <th>
-                        Quantidade no estoque
-                      </th>
-					  <th>
-                        Ação
-                      </th>
-					  
+                    <thead style="color:#0082F7; text-align:center"> 
+                    <th>Produto</th>
+                    <th>Quantidade no estoque</th>
+					          <th>Preço</th>
+                    <th>Ação</th>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td style="text-align:center">
-                          Brinquedos
-                        </td>
-                        <td style="text-align:center">
-                          Portugal
-                        </td>
-                        <td style="text-align:center">
-                          3
-                        </td>
-						
+                      <ul>
+                  
+                              <h6>produto   I  Quantidade  I Preço   I  Ação</h6>
+                            {% for produto in produtos %}
+                              
+                              <li><h6>{{produto.name}} I  {{produto.quantidadeEstoque}} I  {{produto.precoProduto}}</h6></li>
+
+                            {% endfor%}
+
+                         <!--
+ 
+                        <td style="text-align:center">{{produtos.name}}</td>
+                        <td style="text-align:center"> {{produtos.quantidadeEstoque}}</td>
+                        <td style="text-align:center">{{produtos.precoProduto}}</td>         
+                     
+                      -->
 						<td style="text-align:center"> 
 							<a href="#" onclick="toggle()" style="color:green"><i class="fa fa-fw fa-save"></i> Atualizar</a> | 
 							<a href="delete.php?delId=7821" style="color:red" onClick="return confirm('Are you sure to delete this user?');"><i class="fa fa-fw fa-edit"></i> Inativar</a>
 						</td>
-                      </tr>
+                      </ul>
                     </tbody>
                   </table>
                 </div>
@@ -243,8 +233,12 @@ Coded by www.creative-tim.com
                 <strong><h4 class="card-title" style="color:blue"> Atualizar produto</h4></strong>
               </div>
               <div class="card-body">
-                <form action="/produtos">
-					<div class="form-holder">
+                <form  action="{% url 'winx_sistema-cadastro'%}">
+                {% csrf_token %} 
+                {{ form.errors }}
+				        	{{ form.non_field_errors }}
+        
+        	<div class="form-holder">
 						<span class="lnr lnr-user"></span>
 						
 						<select style="color:#0082F7; font-family:Arial black; font-size:14px" name="select">
@@ -256,25 +250,25 @@ Coded by www.creative-tim.com
 					<br>
 					<div class="form-holder">
 						<span class="lnr lnr-user"></span>
-						<input type="text" class="form-control" placeholder="Nome">
+						<input type="text" class="form-control" name="name" placeholder="Nome">
 					</div>	<br>
 					<div class="form-holder">
 						<span class="lnr lnr-user"></span>
-						<input type="number" class="form-control" placeholder="Preço">
+						<input type="number" class="form-control" name="precoProduto " placeholder="Preço">
 					</div>	<br>
 					<div class="form-holder">
 						<span class="lnr lnr-user"></span>
-						<input type="number" class="form-control" placeholder="Código do produto">
+						<input type="number" class="form-control" name="codigoProduto " placeholder="Código do produto">
 					</div>	<br>
 					<div class="form-holder">
 						<span class="lnr lnr-user"></span>
-						<input type="number" class="form-control" placeholder="Quantidade estoque">
+						<input type="number" class="form-control" name="quantidadeEstoque " placeholder="Quantidade estoque">
 					</div>
 						
 					<div class="form-holder">
 
-						<button style="color:white; height:31px; border:white; background-color:green"><i class="fa fa-fw fa-save"></i>
-							<span >Atualizar</span>
+						<button  type="submit" style="color:white; height:31px; border:white; background-color:green"><i class="fa fa-fw fa-save"></i>
+							Atualizar
 						</button>
 						
 						<a href="#" style="color:white; background-color:red" onclick="toggle()">

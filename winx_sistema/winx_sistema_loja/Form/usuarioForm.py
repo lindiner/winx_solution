@@ -9,7 +9,7 @@ class UsuarioForm(ModelForm):
         fields = ['name', 'email','idade', 'endereco', 'cpf'] 
 
 
-class usuarioLoginForm(ModelForm):
+class UsuarioLoginForm(ModelForm):
     class Meta:
         model = loginAcessoS
         fields = ['login', 'senha']

@@ -26,41 +26,39 @@
 					<img src="{% static 'images/Aproveite.png' %}" alt="" class="image-entregas">
 					<img src="{% static 'images/caminhão.png' %}" alt="" class="image-caminhao">
 
-					<form action="/produtos"> <!-- inserir aqui a função do cadastro -->
+					<form action="{% url 'winx_sistema-criar_lojinha'%}"  method="POST"> <!-- inserir aqui a função do cadastro -->
 						
+						{% csrf_token %} 
+						{{ form.errors }}
+						{{ form.non_field_errors }}
+
 						<h1 style="text-align:center"> Dados da sua loja </h1> <br>
 						<img src="{% static 'images/store.jpg' %}" alt="" class="image-store">
 
 						<!--<img src="images/fases.png" alt="">-->
 						<div class="form-holder">
 							<span class="lnr lnr-user"></span>
-							<input type="text" class="form-control" placeholder="Nome da sua loja">
+							<input type="text" class="form-control" name="nameLoja"  placeholder="Nome da sua loja">
 						</div>
 						
 						<div class="form-holder">
 							<span class="lnr lnr-home"></span>
-							<input type="text" class="form-control" placeholder="Endereço">
+							<input type="text" class="form-control" name="endereco" placeholder="Endereço">
 						</div>
 						
 						<div class="form-holder">
 							<span class="lnr lnr-envelope"></span>
-							<input type="mail" class="form-control" placeholder="E-mail">
+							<input type="mail" class="form-control" name="emailLoja" placeholder="E-mail">
 						</div>
 						
 						
 						<div class="form-holder">
 							<span class="lnr lnr-calendar-full"></span>
-							<input type="number" class="form-control" placeholder="Telefone">
+							<input type="number" class="form-control" name="telefoneLoja" placeholder="Telefone">
 						</div>
 						
-						
-						<div class="form-holder">
-							<span class="lnr lnr-user"></span>
-							<input type="text" class="form-control" placeholder="Breve descrição">
-						</div>
-						
-						<button>
-							<span>Criar vitrine</span>
+						<button type="submit">
+							Criar vitrine
 						</button>
 						
 					</form>

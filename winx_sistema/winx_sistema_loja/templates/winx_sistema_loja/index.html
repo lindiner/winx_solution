@@ -23,22 +23,25 @@
 				<div class="inner">
 					<img src="{% static 'images/magalu.png' %}" alt="" class="image-1">
 					<img src="{% static 'images/tag.png' %}" alt="" class="image-tag">
-					<form action="/produtos">
+					<form  action="{% url 'winx_sistema-home'%}"  method="POST">
+						{% csrf_token %} 
+						{{ form.errors }}
+						{{ form.non_field_errors }}
 						<img src="{% static 'images/logo_parceiros.png' %}" alt="">
 						<!--<img src="images/fases.png" alt="">-->
 						<div class="form-holder">
 							<span class="lnr lnr-user"></span>
-							<input type="number" class="form-control" placeholder="Usuário">
+							<input type="text" class="form-control" name="login" placeholder="Usuário">
 						</div>
 						
 						<div class="form-holder">
 							<span class="lnr lnr-lock"></span>
-							<input type="password" class="form-control" placeholder="Senha">
+							<input type="password" class="form-control" name="senha" placeholder="Senha">
 						</div>
 
 						<h6><a href="/cadastro"> Não tem cadastro? Acesse! </a></h6>
-						<button>
-							<span>Entrar</span>
+						<button type="submit">
+							Entrar
 						</button>
 					</form>
 				</div>
