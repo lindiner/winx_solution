@@ -45,7 +45,7 @@ E a página de controle da loja:
 
 Viu só como é fácil? Ainda assim, se por algum motivo algo não estiver claro, você pode conversar através de um chat com a própria Magalu! Ela adora ajudar e estará sempre disponível! :information_desk_person:
 
-![Conversa com o bot](https://raw.githubusercontent.com/lindiner/winx_solution/main/screenshots/magalu%20gif.gif)
+<div style="text-align:center"><img src="https://raw.githubusercontent.com/lindiner/winx_solution/main/screenshots/magalu%20gif.gif"/></div>
 
 ## :star_struck: O que devo fazer para testar o projeto?
 
@@ -130,12 +130,22 @@ Requisitos não obrigatórios:
 
 ### Tabela de Requisitos
 
-Requisito | Cumprimento
---------- | -----------
-API Rest | :heavy_check_mark:
+Requisito obrigatório | Cumprimento
+--------------------- | -----------
+Rendering templates | :heavy_check_mark:
 Representação | :heavy_check_mark:
 CRUD | :heavy_check_mark:
+
+Requisito opcional | Cumprimento
+------------------ | -----------
 Testes unitários |  :x:
 CI | :heavy_check_mark:
 Versionamento | :heavy_check_mark:
 API seller |  :x:
+
+Extras | Cumprimento
+------ | -----------
+Cadastro e login | :heavy_check_mark:
+Chatbot | :heavy_check_mark: 
+Sistema de Recomendação | :x:
+Documentação Completa | :heavy_check_mark:
